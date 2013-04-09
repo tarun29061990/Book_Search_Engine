@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h2#head #{title}
+  div#form
+    form(method='post')
+      input(type="text",id="text",name="book_name", placeholder="Enter Book Name")
+      input(type="submit",id="button",value="Search")
+
+
+  div#footer
+    p Created By 
+      a(target="_blank",href="http://tarun29061990.com") Tarun Chaudhary
+      span (tarun29061990@gmail.com)

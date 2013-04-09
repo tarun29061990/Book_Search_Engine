@@ -1,0 +1,50 @@
+- var arr=data
+- var prices=prices
+- var arr1=data1
+- var a=arr1.Summary
+
+title Details of #{title}
+
+h2 #{title}
+if(arr1.AuthorsText[0]=="[object Object]")
+  p 
+else
+  p#author By #{arr1.AuthorsText[0]}
+- var isbn=arr.$.isbn
+
+if(prices == undefined)
+  p 
+else
+  - var len=prices.length
+
+img(id="image",src="http://books.google.co.in/books?vid=ISBN#{isbn}&printsec=frontcover&img=2&zoom=1")
+div#summary
+  h1 Summary
+  if(arr1.Summary=="[object Object]")
+    p Summary Not Available
+  else
+    p #{arr1.Summary}
+
+div#main_img
+  h1#price_text Prices On Various Merchant Websites
+  a(id="flipkart",target="_blank",href="http://www.flipkart.com/m/search-all?query=#{isbn}") Flipkart
+  br
+
+
+- for(var i=0;i<len;i++){
+  - var in_stock=prices[i].$.is_in_stock;
+  - var store_id=prices[i].$.store_id;
+  - var store_url=prices[i].$.store_url;
+  - var price=prices[i].$.price;
+  - var currency=prices[i].$.currency_code;
+  div#price_list
+    if(in_stock==1)
+      br
+      a(target="_blank",href="#{store_url}") #{store_id}
+      &nbsp &nbsp#{price} &nbsp #{currency}
+      br
+- }
+
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')

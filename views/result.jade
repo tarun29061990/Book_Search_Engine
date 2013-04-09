@@ -1,0 +1,30 @@
+
+- var array=data
+- var author={}
+- for(var j=0;j<length;j++){
+  - author[j]=array[j].AuthorsText[0]
+- }
+
+title Search Results for #{title}
+h2 Search Results for #{title}
+
+- var i=0
+div#img_pad
+  - for(i=0;i<length;i++){
+    - var isbn=array[i].$.isbn
+    div#ind_img
+      a(href="/detail/#{isbn}")
+        img(id="result_img_book",src="http://books.google.co.in/books?vid=ISBN#{isbn}&printsec=frontcover&img=1&zoom=5")
+      a(id="title_tag",href="/detail/#{isbn}") #{array[i].Title}
+      if(author[i]=="[object Object]")
+        p
+      else
+        p#author_text #{author[i]}
+    br
+    br
+    br
+  - }
+
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
