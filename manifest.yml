@@ -1,0 +1,17 @@
+---
+applications:
+  .:
+    name: Book_Search
+    framework:
+      name: node
+      info:
+        mem: 64M
+        description: Node.js Application
+        exec: 
+    infra: aws
+    url: Book_Search.aws.af.cm
+    mem: 128M
+    instances: 1
+    services:
+      mongodb:
+        type: mongodb

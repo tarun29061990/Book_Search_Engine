@@ -40,7 +40,7 @@ div#main_img
   div#price_list
     if(in_stock==1)
       br
-      a(target="_blank",href="#{store_url}") #{store_id}
+      a(target="_blank",id="store_id",href="#{store_url}") #{store_id}
       &nbsp &nbsp#{price} &nbsp #{currency}
       br
 - }
@@ -48,3 +48,9 @@ div#main_img
 html
   head
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+
+  div#footer
+    p Created By 
+      a(target="_blank",href="http://tarun29061990.com") Tarun Chaudhary
+      span (tarun29061990@gmail.com)

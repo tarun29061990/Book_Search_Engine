@@ -1,5 +1,6 @@
 html {
 /*background: url(../images/book1.jpg) no-repeat fixed center center / cover transparent;*/
+  background-color: #ffe4c4;
   font-size: 100%;
 }
 body {
@@ -54,6 +55,8 @@ input {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
+  background-color: #ffa500;
+  cursor: pointer;
 }
 #img_pad {
   margin-left: 30%;
@@ -66,15 +69,17 @@ h2 {
   -webkit-border-radius: 1em;
   -moz-border-radius: 1em;
   -o-border-radius: 1em;
-  height: 15%;
-  width: 58%;
+  margin-left: -36%;
+  margin-top: 6%;
+  height: 32%;
+  width: 88%;
 }
 #ind_img:hover {
-  background: #40e0d0;
+  background: #ffa500;
 }
 #title_tag {
   color: #000;
-  font-size: 1.3em;
+  font-size: 2.1em;
   margin-left: 2%;
   margin-top: 0;
   position: absolute;
@@ -90,7 +95,7 @@ h2 {
 }
 #summary {
   position: absolute;
-  top: 21%;
+  top: 19%;
   margin-left: 24%;
 }
 h1 {
@@ -120,13 +125,21 @@ p {
   left: 28%;
 }
 #flipkart {
+  background-color: #ffa500;
+  font-family: helvetica arial;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -o-border-radius: 1em;
+  color: #000;
+  left: 53%;
   position: absolute;
-  left: 29%;
-  top: 61%;
+  top: 63%;
 }
 #price_list {
   margin-left: 27%;
-  margin-top: 2%;
 }
 #footer {
   margin-top: 37%;
@@ -134,10 +147,26 @@ p {
   font-size: 1.1em;
 }
 #author_text {
-  margin-left: 16%;
+  margin-left: 21%;
   margin-top: -10%;
 }
 #result_img_book {
   border-style: solid;
   border-width: 0.1em;
+  height: 85%;
+  width: 15%;
+}
+#search_top_text {
+  margin-left: 0%;
+}
+#store_id {
+  background-color: #ffa500;
+  font-family: helvetica arial;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -o-border-radius: 1em;
+  color: #000;
 }
